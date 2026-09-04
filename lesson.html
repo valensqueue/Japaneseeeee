@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Japan - Lesson</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lesson.css">
+</head>
+<body class="lesson-page">
+    <div class="container">
+        <div class="lesson-wrapper">
+            <!-- Header Navigation -->
+            <div class="lesson-header">
+                <button class="btn-nav btn-nav-left" onclick="goToPreviousLesson()">← PREVIOUS</button>
+                <button class="btn-back" onclick="goToCoursePage()">📚 BACK TO COURSE</button>
+                <button class="btn-nav btn-nav-right" onclick="goToNextLesson()">NEXT →</button>
+            </div>
+
+            <!-- Lesson Content Card -->
+            <div class="lesson-content-card card">
+                <!-- Lesson Number -->
+                <div class="lesson-header-content">
+                    <h1 class="lesson-number" id="lessonNumber">LESSON 001</h1>
+                    <div class="decoration-corner decoration-corner-tl"></div>
+                    <div class="decoration-corner decoration-corner-tr"></div>
+                </div>
+
+                <!-- Lesson Title -->
+                <div class="lesson-title-section">
+                    <h2 class="lesson-main-title" id="lessonTitle">はじめまして</h2>
+                    <hr class="lesson-divider">
+                </div>
+
+                <!-- Main Content -->
+                <div class="lesson-main">
+                    <!-- Japanese Section -->
+                    <div class="content-section">
+                        <h3 class="section-title">Japanese</h3>
+                        <div class="content-box">
+                            <p class="japanese-text" id="lessonJapanese">日本語</p>
+                        </div>
+                    </div>
+
+                    <!-- Reading Section -->
+                    <div class="content-section">
+                        <h3 class="section-title">Reading</h3>
+                        <div class="content-box">
+                            <p class="reading-text" id="lessonReading">nihongo</p>
+                        </div>
+                    </div>
+
+                    <!-- Meaning Section -->
+                    <div class="content-section">
+                        <h3 class="section-title">Meaning</h3>
+                        <div class="content-box">
+                            <p class="meaning-text" id="lessonMeaning">Japanese language</p>
+                        </div>
+                    </div>
+
+                    <!-- Example Section -->
+                    <div class="content-section">
+                        <h3 class="section-title">✏️ Example</h3>
+                        <div class="example-box">
+                            <p class="example-text" id="lessonExample">これは日本語です。<br>(Kore wa nihongo desu.)</p>
+                        </div>
+                    </div>
+
+                    <!-- Activity Section -->
+                    <div class="content-section">
+                        <h3 class="section-title">📖 Activity</h3>
+                        <div class="activity-box">
+                            <p class="activity-text" id="lessonActivity">Complete this lesson to understand the basics!</p>
+                            <button class="btn btn-success" onclick="completeLessonAndContinue()">
+                                ✓ MARK AS COMPLETED
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="lesson-footer">
+                    <button class="btn btn-secondary" onclick="goToPreviousLesson()">← PREVIOUS</button>
+                    <button class="btn btn-primary" onclick="completeLessonAndContinue()">NEXT LESSON →</button>
+                </div>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="lesson-progress-indicator">
+                <p id="lessonProgressText">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/lesson.js"></script>
+</body>
+</html>
