@@ -1,0 +1,328 @@
+/* =====================================================
+   Mine Japan - Course Page Stylesheet
+   ===================================================== */
+
+.course-page {
+    background: linear-gradient(135deg, #FFF8E8 0%, #FFFDF7 100%);
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.course-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== Course Header ===== */
+
+.course-header {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: var(--warm-brown);
+    border: 2px solid var(--pastel-pink);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.btn-back:hover {
+    background-color: var(--pastel-pink);
+    color: white;
+    transform: translateX(-2px);
+}
+
+.course-title-section {
+    text-align: center;
+    animation: slideInDown 0.6s ease;
+}
+
+.course-title {
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: var(--warm-brown);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.course-level {
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--pastel-pink);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.course-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* ===== Progress Section ===== */
+
+.progress-section {
+    margin-bottom: 40px;
+    padding: 28px;
+    border-left: 4px solid var(--pastel-pink);
+    animation: slideInUp 0.6s ease 0.2s both;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.progress-header h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--warm-brown);
+}
+
+.progress-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 600;
+    color: var(--dusty-rose);
+    background-color: rgba(217, 143, 165, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.progress-percentage {
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 600;
+    color: var(--pastel-pink);
+    margin-top: 12px;
+}
+
+/* ===== Lessons Container ===== */
+
+.lessons-container {
+    margin-bottom: 40px;
+}
+
+.lessons-heading {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: var(--warm-brown);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 20px;
+    animation: fadeIn 0.6s ease 0.4s both;
+}
+
+/* ===== Lesson Card ===== */
+
+.lesson-card {
+    background-color: var(--paper-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 2px solid rgba(107, 81, 71, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.lesson-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--butter-yellow);
+    opacity: 0.3;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.lesson-card:hover {
+    transform: translateY(-6px) rotate(-0.5deg);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--pastel-pink);
+}
+
+.lesson-card.completed {
+    background: linear-gradient(135deg, rgba(197, 227, 192, 0.15) 0%, rgba(197, 227, 192, 0.05) 100%);
+    border-color: var(--mint-green);
+}
+
+.lesson-card.locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+}
+
+.lesson-card.locked:hover {
+    transform: none;
+    box-shadow: var(--shadow-light);
+    border-color: rgba(107, 81, 71, 0.1);
+}
+
+/* Lesson Card Content */
+
+.lesson-card-number {
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--pastel-pink);
+    margin-bottom: 12px;
+}
+
+.lesson-card-japanese {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.lesson-card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    min-height: 40px;
+}
+
+.lesson-card-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(107, 81, 71, 0.1);
+}
+
+.lesson-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.lesson-status-badge.completed {
+    background-color: var(--mint-green);
+    color: white;
+}
+
+.lesson-status-badge.unlocked {
+    background-color: var(--baby-blue);
+    color: white;
+}
+
+.lesson-status-badge.locked {
+    background-color: #ddd;
+    color: #999;
+}
+
+.lesson-status-text {
+    color: var(--text-light);
+}
+
+.lesson-card.completed .lesson-status-text {
+    color: var(--mint-green);
+    font-weight: 700;
+}
+
+.lesson-card.locked .lesson-status-text {
+    color: #999;
+}
+
+/* ===== Course Footer ===== */
+
+.course-footer {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 0.6s ease 0.6s both;
+}
+
+.course-footer .btn {
+    margin: 10px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    .course-wrapper {
+        padding: 0 16px;
+    }
+    
+    .progress-section {
+        padding: 20px;
+    }
+    
+    .lessons-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+        gap: 16px;
+    }
+    
+    .lesson-card {
+        padding: 20px;
+    }
+    
+    .lesson-card-japanese {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-wrapper {
+        padding: 0 12px;
+    }
+    
+    .course-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    .course-level {
+        font-size: 1.3rem;
+    }
+    
+    .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .lesson-card {
+        padding: 16px;
+    }
+    
+    .btn-back {
+        width: 100%;
+        justify-content: center;
+    }
+}
