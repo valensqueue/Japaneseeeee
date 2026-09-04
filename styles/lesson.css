@@ -1,0 +1,389 @@
+/* =====================================================
+   Mine Japan - Lesson Page Stylesheet
+   ===================================================== */
+
+.lesson-page {
+    background: linear-gradient(135deg, #FFF8E8 0%, #FFFDF7 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.lesson-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ===== Lesson Header Navigation ===== */
+
+.lesson-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-nav {
+    background-color: var(--baby-blue);
+    color: var(--warm-brown);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-nav:hover {
+    background-color: #a8cce0;
+    transform: translateY(-2px);
+}
+
+.btn-nav:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-nav-left, .btn-nav-right {
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn-back {
+    background-color: var(--pastel-pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-back:hover {
+    background-color: var(--dusty-rose);
+    transform: translateY(-2px);
+}
+
+/* ===== Lesson Content Card ===== */
+
+.lesson-content-card {
+    background-color: var(--paper-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid rgba(107, 81, 71, 0.08);
+    animation: slideInUp 0.6s ease 0.2s both;
+}
+
+/* Grid background effect */
+.lesson-content-card {
+    background-image: 
+        repeating-linear-gradient(
+            to right,
+            transparent,
+            transparent 49px,
+            rgba(107, 81, 71, 0.02) 49px,
+            rgba(107, 81, 71, 0.02) 50px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 49px,
+            rgba(107, 81, 71, 0.02) 49px,
+            rgba(107, 81, 71, 0.02) 50px
+        );
+    background-attachment: fixed;
+}
+
+/* ===== Lesson Header Content ===== */
+
+.lesson-header-content {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.lesson-number {
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--pastel-pink);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.decoration-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.decoration-corner-tl {
+    top: -10px;
+    right: 20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23F8DFA3"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.decoration-corner-tr {
+    top: 60px;
+    right: -20px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 20 20 Q 50 20 50 50 Q 50 80 20 80 Z" fill="%23B8DDEB"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ===== Lesson Title ===== */
+
+.lesson-title-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.lesson-main-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--warm-brown);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.lesson-divider {
+    border: none;
+    border-top: 2px solid var(--pastel-pink);
+    width: 80px;
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+/* ===== Main Content ===== */
+
+.lesson-main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 32px;
+}
+
+/* Content Sections */
+
+.content-section {
+    animation: fadeIn 0.6s ease backwards;
+}
+
+.content-section:nth-child(1) { animation-delay: 0.2s; }
+.content-section:nth-child(2) { animation-delay: 0.3s; }
+.content-section:nth-child(3) { animation-delay: 0.4s; }
+.content-section:nth-child(4) { animation-delay: 0.5s; }
+.content-section:nth-child(5) { animation-delay: 0.6s; }
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== Content Boxes ===== */
+
+.content-box {
+    background: linear-gradient(135deg, rgba(248, 223, 163, 0.1) 0%, rgba(184, 221, 235, 0.1) 100%);
+    border: 2px solid rgba(107, 81, 71, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.japanese-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--warm-brown);
+    text-align: center;
+}
+
+.reading-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--text-dark);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.meaning-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* ===== Example Box ===== */
+
+.example-box {
+    background: linear-gradient(135deg, rgba(217, 143, 165, 0.1) 0%, rgba(248, 223, 163, 0.1) 100%);
+    border: 2px dashed var(--pastel-pink);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.example-box::before {
+    content: '📌';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.example-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--warm-brown);
+    line-height: 1.8;
+}
+
+/* ===== Activity Box ===== */
+
+.activity-box {
+    background: linear-gradient(135deg, rgba(197, 227, 192, 0.15) 0%, rgba(197, 227, 192, 0.05) 100%);
+    border: 2px solid var(--mint-green);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.activity-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.activity-box .btn {
+    margin-top: 12px;
+}
+
+/* ===== Lesson Footer ===== */
+
+.lesson-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 2px solid rgba(107, 81, 71, 0.1);
+}
+
+.lesson-footer .btn {
+    flex: 1;
+}
+
+/* ===== Progress Indicator ===== */
+
+.lesson-progress-indicator {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    animation: fadeIn 0.6s ease 0.8s both;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    .lesson-content-card {
+        padding: 24px;
+    }
+    
+    .lesson-header {
+        flex-direction: column;
+    }
+    
+    .btn-nav {
+        width: 100%;
+    }
+    
+    .lesson-number {
+        font-size: 2rem;
+    }
+    
+    .lesson-main-title {
+        font-size: 1.6rem;
+    }
+    
+    .lesson-footer {
+        flex-direction: column;
+    }
+    
+    .content-box {
+        min-height: 50px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lesson-content-card {
+        padding: 16px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .lesson-header {
+        margin-bottom: 20px;
+    }
+    
+    .lesson-number {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+    
+    .lesson-main-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .japanese-text {
+        font-size: 1.3rem;
+    }
+    
+    .content-box {
+        padding: 12px;
+    }
+    
+    .lesson-footer {
+        gap: 8px;
+    }
+    
+    .btn-nav, .btn-back {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
