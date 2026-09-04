@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Japan - Course</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/course.css">
+</head>
+<body class="course-page">
+    <div class="container">
+        <div class="course-wrapper">
+            <!-- Header -->
+            <div class="course-header">
+                <button class="btn-back" onclick="goToStartPage()">← BACK</button>
+                
+                <div class="course-title-section">
+                    <h1 class="course-title">MINE JAPAN</h1>
+                    <h2 class="course-level">LEVEL 1</h2>
+                    <p class="course-subtitle">Japanese Beginner</p>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="progress-section card">
+                <div class="progress-header">
+                    <h3>Progress</h3>
+                    <span class="progress-text" id="progressText">0 / 300</span>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                
+                <p class="progress-percentage" id="progressPercentage">0%</p>
+            </div>
+
+            <!-- Lessons Grid -->
+            <div class="lessons-container">
+                <h3 class="lessons-heading">📚 Lessons</h3>
+                <div class="lessons-grid" id="lessonsGrid">
+                    <!-- Lessons will be populated here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Reset Progress Button -->
+            <div class="course-footer">
+                <button class="btn btn-secondary" onclick="resetAllProgress()">🔄 Reset Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/course.js"></script>
+</body>
+</html>
