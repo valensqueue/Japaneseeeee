@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Japanese Notebook — เรียนภาษาญี่ปุ่นตั้งแต่ 0</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="decor decor-one"></div>
+<div class="decor decor-two"></div>
+<div class="decor decor-three"></div>
+
+<div class="app">
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                日
+            </div>
+
+            <div class="brand-text">
+
+                <h1>Japanese Notebook</h1>
+
+                <p>
+                    เรียนภาษาญี่ปุ่นตั้งแต่ศูนย์
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="top-progress">
+
+            <div class="progress-info">
+
+                <span>
+                    COURSE PROGRESS
+                </span>
+
+                <span id="progressText">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                JAPANESE FROM ZERO
+            </div>
+
+            <h2>
+                เรียนญี่ปุ่นแบบ
+                <span>ค่อย ๆ เข้าใจ</span>
+            </h2>
+
+            <p class="hero-description">
+                คอร์สนี้เริ่มตั้งแต่คนที่ยังอ่าน
+                あいうえお ไม่ออก
+                ไปจนถึงการสร้างประโยค
+                อ่านบทสนทนา และนำภาษาไปใช้จริง
+                โดยจะค่อย ๆ เพิ่มความยากทีละขั้น
+                พร้อมคำอ่านภาษาไทย ตัวอย่าง
+                แบบฝึกหัด และแบบทดสอบ
+            </p>
+
+            <div class="hero-actions">
+
+                <button
+                    class="btn btn-primary"
+                    onclick="startCourse()"
+                >
+                    เริ่มบทเรียน
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="goToKana()"
+                >
+                    ดูตารางฮิรางานะ
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-layout">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                COURSE LESSONS
+            </div>
+
+            <div
+                class="lesson-list"
+                id="lessonList"
+            ></div>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="content">
+
+            <article
+                class="lesson-page"
+                id="lessonPage"
+            >
+
+                <!-- JavaScript จะสร้างบทเรียนตรงนี้ -->
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
