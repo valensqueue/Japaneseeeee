@@ -1,0 +1,364 @@
+/* =====================================================
+   Mine Japan - Main Stylesheet
+   Color Palette: Pastel Japanese Scrapbook
+   ===================================================== */
+
+:root {
+    /* Primary Colors */
+    --cream: #FFF8E8;
+    --pastel-pink: #F6B6C8;
+    --baby-blue: #B8DDEB;
+    --mint-green: #C5E3C0;
+    --butter-yellow: #F8DFA3;
+    --warm-brown: #6B5147;
+    --paper-white: #FFFDF7;
+    --dusty-rose: #D98FA5;
+    
+    /* Dark text */
+    --text-dark: #4A4A4A;
+    --text-light: #7A7A7A;
+    
+    /* Shadows */
+    --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-soft: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ===== Typography ===== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--warm-brown);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--text-dark);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* Japanese Text */
+.japanese-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--warm-brown);
+    letter-spacing: 1px;
+}
+
+.japanese-small {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    color: var(--text-light);
+}
+
+/* ===== Container ===== */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--pastel-pink), var(--dusty-rose));
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background-color: var(--baby-blue);
+    color: var(--warm-brown);
+}
+
+.btn-secondary:hover {
+    background-color: #a8cce0;
+}
+
+.btn-success {
+    background-color: var(--mint-green);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #b0d9b4;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.btn-large {
+    padding: 14px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ===== Cards ===== */
+
+.card {
+    background-color: var(--paper-white);
+    border-radius: 12px;
+    border: 1px solid rgba(107, 81, 71, 0.1);
+    box-shadow: var(--shadow-light);
+    padding: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card-tilted {
+    transform: rotate(-1deg);
+}
+
+.card-tilted:hover {
+    transform: rotate(-1deg) translateY(-4px);
+}
+
+/* Card with background pattern */
+.card-with-lines {
+    background-image: 
+        repeating-linear-gradient(
+            to right,
+            transparent,
+            transparent 24px,
+            rgba(107, 81, 71, 0.05) 24px,
+            rgba(107, 81, 71, 0.05) 25px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 29px,
+            rgba(107, 81, 71, 0.08) 29px,
+            rgba(107, 81, 71, 0.08) 30px
+        );
+}
+
+/* ===== Progress Bar ===== */
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(107, 81, 71, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pastel-pink), var(--butter-yellow));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px rgba(246, 182, 200, 0.5);
+}
+
+/* ===== Utilities ===== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+.text-muted {
+    color: #999;
+}
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+
+.gap-1 { gap: 8px; }
+.gap-2 { gap: 16px; }
+.gap-3 { gap: 24px; }
+
+/* ===== Animations ===== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-fade {
+    animation: fadeIn 0.5s ease;
+}
+
+.animate-slide-down {
+    animation: slideInDown 0.5s ease;
+}
+
+.animate-slide-up {
+    animation: slideInUp 0.5s ease;
+}
+
+.animate-wiggle {
+    animation: wiggle 0.5s ease;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
