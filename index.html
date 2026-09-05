@@ -1,55 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mine Japan - Learn Japanese</title>
-    
-    <!-- Google Fonts - Cute & Rounded -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/start.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8e8" />
+  <title>Mine Japan — Japanese Notebook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="start-page">
-    <div class="container">
-        <div class="start-wrapper">
-            <!-- Decorations -->
-            <div class="decoration decoration-bow top-left"></div>
-            <div class="decoration decoration-flower top-right"></div>
-            <div class="decoration decoration-goldfish bottom-left"></div>
-            <div class="decoration decoration-sticker bottom-right"></div>
+<body>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-action="home" aria-label="กลับหน้าหลัก">
+        <span class="brand-mark">ま</span><span>MINE JAPAN</span>
+      </button>
+      <div class="top-actions">
+        <button class="text-btn" data-action="course">COURSE</button>
+        <button class="text-btn" data-action="progress">PROGRESS</button>
+      </div>
+    </header>
 
-            <!-- Main Content -->
-            <div class="start-content">
-                <!-- Header -->
-                <div class="start-header">
-                    <h1 class="main-title">MINE JAPAN</h1>
-                    <p class="subtitle">日本語 NOTEBOOK</p>
-                </div>
+    <main id="app" tabindex="-1"></main>
 
-                <!-- Description -->
-                <div class="start-description">
-                    <p>Learn Japanese</p>
-                    <p>from zero.</p>
-                </div>
-
-                <!-- Button -->
-                <button class="btn btn-primary start-button" onclick="goToCoursePage()">
-                    <span>START LEARNING</span>
-                </button>
-
-                <!-- Info -->
-                <div class="start-info">
-                    <span class="lesson-count">✿ 300 Lessons ✿</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/main.js"></script>
-    <script src="js/navigation.js"></script>
+    <footer class="footer">MINE JAPAN · Japanese Notebook · Level 1</footer>
+  </div>
+  <script src="lessons-data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
